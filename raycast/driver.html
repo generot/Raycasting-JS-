@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Raycasting</title>
+        <script>var mX, mY;</script>
+        <canvas id="canvas" width="600" height="600" onmousemove="mX = event.clientX; mY = event.clientY;"></canvas>
+
+        <script src="geometry.js"></script>
+        <script src="impl.js"></script>
+    </head>
+    <body>
+        <script>
+            window.addEventListener("keydown", (event) => {
+                if(keydown != undefined)
+                    keydown(event.code);
+            })
+
+            if(update != undefined)
+                setInterval(update, 10/6);
+        </script>
+
+        <p><b>W - Increase F.O.V<br>S - Decrease F.O.V<br>A - Rotate to the left<br>D - Rotate to the right</b></p>
+    </body>
+</html>
